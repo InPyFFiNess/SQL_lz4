@@ -13,11 +13,11 @@ CREATE TABLE Customers(
 
 CREATE TABLE Orders(
 	OrderID INT IDENTITY (1,1) PRIMARY KEY,
-	CustomersID INT NOT NULL,
+	CustomerID INT NOT NULL,
 	OrderTotal FLOAT CHECK (OrderTotal > 0) NOT NULL,
 	OrderDate DATETIME DEFAULT GETDATE() NOT NULL,
 	[Status] NVARCHAR(20) DEFAULT 'Новый' NOT NULL,
-	CONSTRAINT FK_1 FOREIGN KEY (CustomersID) REFERENCES Customers(CustomersID),
+	CONSTRAINT FK_1 FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
 )
 
 create database LogisticsDB
