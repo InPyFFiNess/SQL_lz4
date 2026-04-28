@@ -5,7 +5,7 @@ create database SalesDB
 use SalesDB
 
 CREATE TABLE Customers(
-	CustomersID INT IDENTITY (1,1) PRIMARY KEY,
+	CustomerID INT IDENTITY (1,1) PRIMARY KEY,
 	FullName NVARCHAR(100) NOT NULL,
 	Email NVARCHAR(100) UNIQUE NOT NULL,
 	RegistrationDate DATETIME DEFAULT GETDATE() NOT NULL,
